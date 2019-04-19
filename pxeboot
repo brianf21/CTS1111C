@@ -8,7 +8,7 @@ chown -R apache:apache /var/www/html
 mkdir -p /var/lib/tftpboot/rhel7.5/pxelinux.cfg
 cp /var/www/html/dvd/images/pxeboot/{vmlinuz,initrd.img}  /var/lib/tftpboot/rhel7.5/
 cp -r /usr/share/syslinux/* /var/lib/tftpboot
-cat > /var/lib/tftpboot/rhel7.5pxelinux.cfg/default << EOF
+cat > /var/lib/tftpboot/rhel7.5/pxelinux.cfg/default << EOF
 default menu.c32
 prompt 0
 timeout 300
