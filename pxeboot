@@ -1,4 +1,4 @@
-nmcli con add con-name static ifname eth0 type ethernet ip4 10.0.0.2 gw4 10.0.0.1 ipv4.dns 10.13.2.5,10.13.2.7 autoconnect yes
+nmcli con add con-name static ifname eth0 type ethernet ip4 10.0.0.2/24 gw4 10.0.0.1 ipv4.dns 10.13.2.5,10.13.2.7 autoconnect yes
 nmcli con mod eth0 autoconnect no
 nmcli con down eth0
 nmcli con up static
