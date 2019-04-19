@@ -8,7 +8,7 @@ chown -R apache:apache /var/www/html
 mkdir -p /var/lib/tftpboot/rhel7.5/pxelinux.cfg
 cp /var/www/html/dvd/images/pxeboot/{vmlinuz,initrd.img}  /var/lib/tftpboot/rhel7.5/
 cp -r /usr/share/syslinux/* /var/lib/tftpboot
-cat > /var/lib/tftpboot/pxelinux.cfg/default << EOF
+cat > /var/lib/tftpboot/rhel7.5pxelinux.cfg/default << EOF
 default menu.c32
 prompt 0
 timeout 300
@@ -18,7 +18,7 @@ menu title PXE Boot Menu
 label 1
   menu label ^1 - Install RHEL 7 x64 with Local http Repo
   kernel rhel7.5/vmlinuz
-  append initrd=rhel7.5/initrd.img showopts  method=http://10.0.0.2/ devfs=nomount ks=http://10.0.0.2/ks-config/ks.cfg 
+  append initrd=rhel7/initrd.img showopts  method=http://10.0.0.2/rhel7.5 devfs=nomount ks=http://10.0.0.2/ks-config/ks.cfg 
 
 label 2
   menu label ^2 - Boot from local media
