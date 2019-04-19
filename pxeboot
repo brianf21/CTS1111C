@@ -23,9 +23,9 @@ prompt 0
 timeout 300
 ontimeout 2
 
-menu title PXE Boot Menu
+menu title RHEL PXE Boot Server
 label 1
-  menu label ^1 - Install RHEL 7 x64 with Local http Repo
+  menu label ^1 - Install RHEL 7 x64 with Local HTTP Repo
   kernel rhel7.5/vmlinuz
   append initrd=rhel7.5/initrd.img showopts method=http://10.0.0.2/rhel7.5/ devfs=nomount ks=http://10.0.0.2/ks-config/ks.cfg ksdevice=eth0
 
