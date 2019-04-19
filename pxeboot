@@ -1,0 +1,75 @@
+yum -y install httpd xinetd syslinux dhcp tftp-server
+
+mkdir /var/www/html/ks-config
+cp ~/anaconda-ks.cfg /var/www/html/ks-config/ks.cfg
+cp -r /content/rhel7.5/x86_64/dvd /var/www/html/
+chown -R apache:apache /var/www/html
+
+cp /var/www/html/dvd/images/pxeboot/{vmlinuz,initrd.img}  /var/lib/tftpboot/images/
+cp -r /usr/share/syslinux/* /var/lib/tftpboot
+mkdir /var/lib/tftpboot/pxelinux/pxelinux.cfg
+cat > /var/lib/tftpboot/pxelinux/pxelinux.cfg/default << EOF
+default menu.c32
+prompt 0
+timeout 300
+ontimeout 2
+
+menu title PXE Boot Menu
+label 1
+  menu label ^1 - Install RHEL 7 x64 with Local http Repo
+  kernel pxelinux/vmlinuz
+  append initrd=rhel7.5/initrd.img showopts  method=http://10.0.0.2/rhel7.5/ devfs=nomount ks=http://10.0.0.2/ks-config/ks.cfg 
+
+label 2
+  menu label ^2 - Boot from local media
+  localboot 0x80
+EOF
+
+cat > /etc/dhcp/dhcpd.conf << EOF
+option domain-name "contoso.com";
+option domain-name-servers 10.13.2.5, 10.13.2.7;
+default-lease-time 3600; 
+max-lease-time 7200;
+authoritative;
+
+option space pxelinux;
+option pxelinux.magic code 208 = string;
+option pxelinux.configfile code 209 = text;
+option pxelinux.pathprefix code 210 = text;
+option pxelinux.reboottime code 211 = unsigned integer 32;
+option architecture-type code 93 = unsigned integer 16;
+
+subnet 10.0.0.0 netmask 255.255.255.0 {
+        option routers                  10.0.0.1;
+        option subnet-mask              255.255.255.0;
+        option domain-search            "contoso.com";
+        option domain-name-servers      10.13.2.5, 10.13.2.7;
+        range   10.0.0.20   10.0.0.254;
+
+        class "pxeclients" {
+	        match if substring (option vendor-class-identifier, 0, 9) = "PXEClient";
+                next-server 10.0.0.2;
+
+	        if option architecture-type = 00:07 {
+	                filename "uefi/shim.efi";
+	        } else {
+	                filename "pxelinux/pxelinux.0";
+	        }
+	}
+}
+EOF
+
+sed -ie 's/	disable			= yes/	disable			= no/g' /etc/xinetd.d/tftp
+
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=dhcp
+firewall-cmd --permanent --add-service=tftp
+firewall-cmd --reload
+
+systemctl enable httpd
+systemctl start httpd
+systemctl enable dhcpd
+systemctl start dhcpd
+systemctl enable xinetd
+systemctl start xinetd
+
