@@ -69,7 +69,7 @@ subnet 10.0.0.0 netmask 255.255.255.0 {
 EOF
 
 sed -ie 's/	disable			= yes/	disable			= no/g' /etc/xinetd.d/tftp
-sed -ie 's/SELinux=enforcing/SELinux=disabled/g' /etc/sysconfig/selinux
+#sed -ie 's/SELinux=enforcing/SELinux=disabled/g' /etc/sysconfig/selinux
 
 setsebool -P tftp_anon_write 1
 setsebool -P tftp_home_dir 1
