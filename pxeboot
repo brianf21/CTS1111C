@@ -11,7 +11,7 @@ mkdir /var/www/html/ks-config
 cp ~/anaconda-ks.cfg /var/www/html/ks-config/ks.cfg
 mkdir /var/www/html/rhel7.5
 chown -R apache:apache /var/www/html
-echo /content/rhel7.5/x86_64/isos/rhel-server-7.5-x86_64-dvd.iso /var/www/html/rhel7.5 iso9660 loop,ro,auto 0 0 >> /etc/fstab
+echo /content/rhel7.5/x86_64/isos/rhel-server-7.5-x86_64-dvd.iso /var/www/html/rhel7.5 iso9660 ro,user,auto 0 0 >> /etc/fstab
 mount /var/www/html/rhel7.5
 
 mkdir -p /var/lib/tftpboot/pxelinux.cfg /var/lib/tftpboot/rhel7.5
