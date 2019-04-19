@@ -2,7 +2,7 @@ yum -y install httpd xinetd syslinux dhcp tftp-server
 
 mkdir /var/www/html/ks-config
 cp ~/anaconda-ks.cfg /var/www/html/ks-config/ks.cfg
-cp -r /content/rhel7.5/x86_64/dvd /var/www/html/
+cp -r /content/rhel7.5/x86_64/dvd/ /var/www/html/
 chown -R apache:apache /var/www/html
 
 mkdir -p /var/lib/tftpboot/rhel7.5/pxelinux.cfg
@@ -18,7 +18,7 @@ menu title PXE Boot Menu
 label 1
   menu label ^1 - Install RHEL 7 x64 with Local http Repo
   kernel rhel7.5/vmlinuz
-  append initrd=rhel7/initrd.img showopts  method=http://10.0.0.2/rhel7.5 devfs=nomount ks=http://10.0.0.2/ks-config/ks.cfg 
+  append initrd=rhel7/initrd.img showopts  method=http://10.0.0.2/ devfs=nomount ks=http://10.0.0.2/ks-config/ks.cfg 
 
 label 2
   menu label ^2 - Boot from local media
