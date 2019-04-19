@@ -85,3 +85,5 @@ systemctl enable dhcpd
 systemctl start dhcpd
 systemctl enable xinetd
 systemctl start xinetd
+
+echo "https://www.golinuxcloud.com/configure-pxe-boot-server-centos-redhat-7-linux/"
