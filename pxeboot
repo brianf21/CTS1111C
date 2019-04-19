@@ -20,7 +20,7 @@ menu title PXE Boot Menu
 label 1
   menu label ^1 - Install RHEL 7 x64 with Local http Repo
   kernel rhel7.5/vmlinuz
-  append initrd=rhel7/initrd.img showopts  method=http://10.0.0.2/ devfs=nomount ks=http://10.0.0.2/ks-config/ks.cfg 
+  append initrd=rhel7.5/initrd.img showopts  method=http://10.0.0.2/ devfs=nomount ks=http://10.0.0.2/ks-config/ks.cfg 
 
 label 2
   menu label ^2 - Boot from local media
