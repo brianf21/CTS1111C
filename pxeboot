@@ -61,6 +61,9 @@ EOF
 
 sed -ie 's/	disable			= yes/	disable			= no/g' /etc/xinetd.d/tftp
 
+setsebool -P tftp_anon_write 1
+setsebool -P tftp_home_dir 1
+
 firewall-cmd --permanent --add-service=http
 firewall-cmd --permanent --add-service=dhcp
 firewall-cmd --permanent --add-service=tftp
