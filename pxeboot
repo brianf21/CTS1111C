@@ -2,7 +2,9 @@ yum -y install httpd xinetd syslinux dhcp tftp-server
 
 mkdir /var/www/html/ks-config
 cp ~/anaconda-ks.cfg /var/www/html/ks-config/ks.cfg
-cp -r /content/rhel7.5/x86_64/dvd/ /var/www/html/
+mkdir /var/www/html/rhel7.5
+mount /content/rhel7.5/x86_64/isos/rhel-server-7.5-x86_64-dvd.iso /var/www/html/rhel7.5/
+#cp -r /content/rhel7.5/x86_64/dvd/ /var/www/html/
 chown -R apache:apache /var/www/html
 
 mkdir -p /var/lib/tftpboot/rhel7.5/pxelinux.cfg
