@@ -7,7 +7,7 @@ chown -R apache:apache /var/www/html
 mount /content/rhel7.5/x86_64/isos/rhel-server-7.5-x86_64-dvd.iso /var/www/html/rhel7.5/
 
 mkdir -p /var/lib/tftpboot/pxelinux.cfg /var/lib/tftpboot/rhel7.5
-cp /content/rhel7.5/dvd/images/pxeboot/{vmlinuz,initrd.img}  /var/lib/tftpboot/rhel7.5/
+cp /content/rhel7.5/dvd/images/pxeboot/{vmlinuz,initrd.img} /var/lib/tftpboot/rhel7.5/
 cp -r /usr/share/syslinux/* /var/lib/tftpboot
 cat > /var/lib/tftpboot/pxelinux.cfg/default << EOF
 default menu.c32
