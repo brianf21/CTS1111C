@@ -1,6 +1,6 @@
-echo #######################################
+echo ooooooooooooooooooooooooooooooooooooooo
 echo Redhat Server 1
-echo #######################################
+echo ooooooooooooooooooooooooooooooooooooooo
 ip address show eth0
 ip route list 0.0.0.0/0
 cat /etc/sysconfig/network-scripts/ifcfg-eth0 | grep ONBOOT
@@ -13,9 +13,9 @@ systemctl list-unit-files | grep httpd
 cat /var/www/html/index.html
 ls -l ~
 ssh rhs2
-echo #######################################
+echo ooooooooooooooooooooooooooooooooooooooo
 echo Redhat Server 2
-echo #######################################
+echo ooooooooooooooooooooooooooooooooooooooo
 ip address show eth0
 ip route list 0.0.0.0/0
 cat /etc/sysconfig/network-scripts/ifcfg-eth0 | grep ONBOOT
