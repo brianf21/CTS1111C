@@ -12,7 +12,7 @@ systemctl static httpd
 systemctl list-unit-files | grep httpd
 cat /var/www/html/index.html
 ls -l ~
-ssh rhs2 << EOF
+ssh rhs2
 echo #######################################
 echo Redhat Server 2
 echo #######################################
@@ -24,4 +24,3 @@ nmcli con show
 hostnamectl
 cat /etc/hosts
 ls -l ~
-EOF
