@@ -8,7 +8,7 @@ cat /etc/sysconfig/network-scripts/ifcfg-static | grep ONBOOT
 nmcli con show
 hostnamectl
 cat /etc/hosts
-systemctl static httpd
+systemctl status httpd
 systemctl list-unit-files | grep httpd
 cat /var/www/html/index.html
 ls -l ~
