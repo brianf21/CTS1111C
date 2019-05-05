@@ -12,7 +12,7 @@ systemctl static httpd
 systemctl list-unit-files | grep httpd
 cat /var/www/html/index.html
 ls -l ~
-ssh rhs2
+ssh roo@rhs2
 echo ooooooooooooooooooooooooooooooooooooooo
 echo Redhat Server 2
 echo ooooooooooooooooooooooooooooooooooooooo
