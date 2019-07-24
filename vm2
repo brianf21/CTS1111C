@@ -1,0 +1,7 @@
+    
+nmcli con add con-name static type ethernet ifname eth0 ip4 10.0.0.101/24 gw 10.0.0.1 ipv4.dns 10.13.2.5,10.13.2.7 autoconnect yes
+nmcli con mod eth0 autoconnect no
+hostnamectl set-hostname vm2.contoso.com
+echo 127.0.0.1 vm2 vm2.contoso.com >> /etc/hosts
+echo 10.0.0.100 vm1 vm1.contoso.com >> /etc/hosts
+#reboot
