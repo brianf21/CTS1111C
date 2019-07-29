@@ -6,7 +6,7 @@
 						1D	;Minimum TTL
 )
 
-@		IN	NS	cs01-vm1.contoso.com.
+@		IN	NS	vm1.contoso.com.
 
 vm1		IN	A	10.0.0.100
 vm2		IN	A	10.0.0.101
