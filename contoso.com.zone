@@ -1,0 +1,14 @@
+@			    IN 	SOA	vm1.contoso.com. root.contoso.com. (
+						1	;Serial
+						1H	;Refresh
+						15M	;Retry
+						1W	;Expire
+						1D	;Minimum TTL
+)
+
+@			    IN	NS	cs01-vm1.contoso.com.
+
+vm1			  IN	A	10.0.0.100
+vm2			  IN	A	10.0.0.101
+gateway		IN	A	10.0.0.1
+router		IN	CNAME	gateway.contoso.com.
