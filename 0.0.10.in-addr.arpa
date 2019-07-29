@@ -1,0 +1,13 @@
+@	IN 	SOA	vm1.contoso.com. root.contoso.com. (
+						1	;Serial
+						1H	;Refresh
+						15M	;Retry
+						1W	;Expire
+						1D	;Minimum TTL
+)
+
+@		IN	NS	vm1.contoso.com.
+
+100		IN	PTR	vm1.contoso.com.
+101		IN	PTR	vm2.contoso.com.
+1		IN	PTR	gateway.contoso.com.
