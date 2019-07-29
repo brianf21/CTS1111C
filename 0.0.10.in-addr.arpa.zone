@@ -1,4 +1,4 @@
-@	IN 	SOA	vm1.contoso.com. root.contoso.com. (
+@		IN 	SOA	vm1.contoso.com. root.contoso.com. (
 						1	;Serial
 						1H	;Refresh
 						15M	;Retry
