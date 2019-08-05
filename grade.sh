@@ -4,12 +4,16 @@ ssh-keygen
 
 ssh-copy-id 10.0.0.101
 
+read -p "Enter your name: " name
+
+echo $name > grade.txt
+
 grade=0
 
 if [ "vm1.contoso.com" == $(hostname) ]
   then
     grade=$(($grade+1))
-    echo hostname on vm1 is correct > grade.txt
+    echo hostname on vm1 is correct >> grade.txt
   else
     echo hostname on vm1 is incorrect >> grade.txt
 fi
