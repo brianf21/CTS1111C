@@ -116,4 +116,4 @@ if [ '//vm1/smbshare' == "$(ssh 10.0.0.101 -C 'mount | grep smbshare | awk '\''{
 fi
 
 echo "Grade = $grade out of 62" >> grade.txt
-echo "$(($grade/62 * 100))%" >> grade.txt
+echo "scale 2 ; ($grade / 62) * 100" >> grade.txt
