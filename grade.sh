@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ssh-keygen
 
 ssh-copy-id 10.0.0.101
