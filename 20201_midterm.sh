@@ -70,3 +70,5 @@ echo -e "$comment\n\n" >> output.txt
 clear
 
 echo "Total score: $score" 
+
+echo "Total score: $score out of 72" >> output.txt
