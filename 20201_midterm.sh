@@ -35,12 +35,12 @@ clear
 
 grep 'looneytunes' /etc/group
 
-echo "User Accounts:"
+echo -e "\nUser Accounts:\n"
 cat /etc/passwd | awk -F : '{
 if ($3 >= 1001 && $3 < 2000)
   print $1
 }'
-echo "Primary Groups"
+echo -e "\nPrimary Groups\n"
 cat /etc/group | awk -F : '{
 if ($3 >= 1001)
   print Group Name $1 Group ID $3
