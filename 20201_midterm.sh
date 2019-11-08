@@ -26,7 +26,7 @@ if ($3 >= 1001 && $3 < 2000)
 echo "Primary Groups"
 cat /etc/group | awk -F : '{
 if ($3 >= 1001)
-  print Group Name: $1 Group ID: $3
+  print Group Name\: $1 Group ID\: $3
 }'
 
 read -p "Sales Users: Max - 4 Points: " answer
