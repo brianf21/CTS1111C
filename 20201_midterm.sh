@@ -5,10 +5,10 @@ score=10
 echo -e "Installation: Max 10 Points - Your score: $score\n\n" > output.txt
 
 ls
-read -p "Student\'s name? Max - 5 Points: " answer
+read -p "Student's name? Max - 5 Points: " answer
 score=$(($score + $answer))
 read -p "Comment: " comment
-echo "Student\'s name: Max 5 Points - Your score: $answer" >> output.txt
+echo "Student's name: Max 5 Points - Your score: $answer" >> output.txt
 echo -e "$comment\n\n" >> output.txt
 clear
 
