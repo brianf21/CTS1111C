@@ -1,12 +1,18 @@
+clear
+
 score=10
 
 ls
 read -p "Username? Max - 5 Points: " answer
 score=$(($score + $answer))
+read -p "Comment: " comment
+echo $comment
 
 ls -l /var/public
 read -p "Directories and Permissions? Max - 20 Points: " answer
 score=$(($score + $answer))
+read -p "Comment: " comment
+echo $comment
 
 ls /etc/skel-*
 echo "/etc/skel-sales"
@@ -15,6 +21,8 @@ echo "/etc/skel-techs"
 grep 'Folks' /etc/skel-techs/.bash_profile
 read -p "Skel Directories? Max - 25 Points: " answer
 score=$(($score + $answer))
+read -p "Comment: " comment
+echo $comment
 
 grep 'looneytunes' /etc/group
 
@@ -35,5 +43,7 @@ read -p "Tech Users: Max - 4 Points: " answer
 score=$(($score + $answer))
 read -p "Devops Users: Max - 4 Points: " answer
 score=$(($score + $answer))
+read -p "Comment: " comment
+echo $comment
 
 echo "Total score: $score"
