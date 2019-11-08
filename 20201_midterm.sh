@@ -38,12 +38,12 @@ grep 'looneytunes' /etc/group
 echo -e "\nUser Accounts:\n"
 cat /etc/passwd | awk -F : '{
 if ($3 >= 1001 && $3 < 2000)
-  print "Username $1 Primary Group $4"
+  print "Username " $1 " Primary Group " $4
 }'
 echo -e "\nPrimary Groups\n"
 cat /etc/group | awk -F : '{
 if ($3 >= 1001)
-  print "Group Name $1 Group ID $3"
+  print "Group Name " $1 " Group ID " $3
 }'
 
 echo -e "\n"
