@@ -10,9 +10,9 @@ score=$(($score + $answer))
 
 ls /etc/skel-*
 echo "/etc/skel-sales"
-cat /etc/skel-sales/.bashrc
+grep 'ipconfig' /etc/skel-sales/.bashrc
 echo "/etc/skel-techs"
-cat /etc/skel-techs/.bash_profile
+grep 'Folks' /etc/skel-techs/.bash_profile
 read -p "Skel Directories? Max - 25 Points: " answer
 score=$(($score + $answer))
 
