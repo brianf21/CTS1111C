@@ -8,7 +8,7 @@ ls
 read -p "Student\'s name? Max - 5 Points: " answer
 score=$(($score + $answer))
 read -p "Comment: " comment
-echo "Username: Max 5 Points - Your score: $answer" >> output.txt
+echo "Student\'s name: Max 5 Points - Your score: $answer" >> output.txt
 echo -e "$comment\n\n" >> output.txt
 clear
 
