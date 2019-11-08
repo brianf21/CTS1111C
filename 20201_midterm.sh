@@ -46,18 +46,21 @@ if ($3 >= 1001)
   print Group Name $1 Group ID $3
 }'
 
+echo -e "\n"
 read -p "Sales Users: Max - 4 Points: " answer
 score=$(($score + $answer))
 read -p "Comment: " comment
 echo "Sales Users: Max - 4 Points - Your score: $answer" >> output.txt
 echo -e "$comment\n\n" >> output.txt
 
+echo -e "\n"
 read -p "Tech Users: Max - 4 Points: " answer
 score=$(($score + $answer))
 read -p "Comment: " comment
 echo "Tech Users: Max - 4 Points - Your score: $answer" >> output.txt
 echo -e "$comment\n\n" >> output.txt
 
+echo -e "\n"
 read -p "Devops Users: Max - 4 Points: " answer
 score=$(($score + $answer))
 read -p "Comment: " comment
