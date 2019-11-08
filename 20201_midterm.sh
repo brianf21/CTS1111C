@@ -2,11 +2,14 @@ clear
 
 score=10
 
+echo -e "Installation: Max 10 Points - Your score: $score\n\n" > output.txt
+
 ls
 read -p "Username? Max - 5 Points: " answer
 score=$(($score + $answer))
 read -p "Comment: " comment
-echo $comment
+echo "Username: Max 5 Points - Your score: $answer" >> output.txt
+echo -e "$comment\n\n" >> output.txt
 clear
 
 
@@ -14,7 +17,8 @@ ls -l /var/public
 read -p "Directories and Permissions? Max - 20 Points: " answer
 score=$(($score + $answer))
 read -p "Comment: " comment
-echo $comment
+echo "Directories and Permissions: Max - 20 Points - Your score: $answer" >> output.txt
+echo -e "$comment\n\n" >> output.txt
 clear
 
 ls /etc/skel-*
@@ -25,7 +29,8 @@ grep 'Folks' /etc/skel-techs/.bash_profile
 read -p "Skel Directories? Max - 25 Points: " answer
 score=$(($score + $answer))
 read -p "Comment: " comment
-echo $comment
+echo "Skel Directories: Max - 25 Points - Your score: $answer" >> output.txt
+echo -e "$comment\n\n" >> output.txt
 clear
 
 grep 'looneytunes' /etc/group
@@ -43,12 +48,22 @@ if ($3 >= 1001)
 
 read -p "Sales Users: Max - 4 Points: " answer
 score=$(($score + $answer))
+read -p "Comment: " comment
+echo "Sales Users: Max - 4 Points - Your score: $answer" >> output.txt
+echo -e "$comment\n\n" >> output.txt
+
 read -p "Tech Users: Max - 4 Points: " answer
 score=$(($score + $answer))
+read -p "Comment: " comment
+echo "Tech Users: Max - 4 Points - Your score: $answer" >> output.txt
+echo -e "$comment\n\n" >> output.txt
+
 read -p "Devops Users: Max - 4 Points: " answer
 score=$(($score + $answer))
 read -p "Comment: " comment
-echo $comment
+echo "Devops Users: Max - 25 Points - Your score: $answer" >> output.txt
+echo -e "$comment\n\n" >> output.txt
+
 clear
 
-echo "Total score: $score"
+echo "Total score: $score" 
