@@ -47,6 +47,7 @@ echo -e "\nPrimary Groups\n"
 cat /etc/group | awk -F : '{
 if ($3 >= 1001 && $3 < 2000)
   print "Group Name " $1 " - Group ID " $3
+  print "Members " $4
 }'
 
 echo -e "\n"
