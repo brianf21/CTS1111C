@@ -1,3 +1,5 @@
+#!/bin/bash
+
 clear
 ls /home/student
 ls /root
