@@ -1,4 +1,6 @@
 clear
+ls /home/student
+ls /root
 
 score=10
 
@@ -11,7 +13,6 @@ read -p "Comment: " comment
 echo "Student's name: Max 5 Points - Your score: $answer" >> output.txt
 echo -e "$comment\n\n" >> output.txt
 clear
-
 
 ls -l /var/public
 read -p "Directories and Permissions? Max - 20 Points: " answer
