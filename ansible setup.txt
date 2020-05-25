@@ -1,0 +1,73 @@
+# DC setup
+
+    New-NetIPAddress -IPAddress 10.0.0.2 -PrefixLength 24 -DefaultGateway 10.0.0.1 -InterfaceAlias Ethernet
+    Set-DnsClientServerAddress -ServerAddresses 8.8.8.8,8.8.4.4 -InterfaceAlias Ethernet
+    Rename-Computer -NewName dc -Restart
+
+    # The DC will now reboot
+    Install-WindowsFeature -Name ad-domain-services -IncludeManagementTools -Restart
+    $pwd = ConvertTo-SecureString Pa11word -AsPlainText -Force
+    Install-ADDSForest -DomainName contoso.com -SafeModeAdministratorPassword $pwd -Force
+
+    # The DC will reboot again
+    Add-DnsServerPrimaryZone -NetworkId 10.0.0/24 -ReplicationScope Domain
+    Register-DnsClient
+
+    # MS setup
+    New-NetIPAddress -IPAddress 10.0.0.23-PrefixLength 24 -DefaultGateway 10.0.0.1 -InterfaceAlias Ethernet
+    Set-DnsClientServerAddress -ServerAddresses 10.0.0.2 -InterfaceAlias Ethernet
+    Add-Computer -DomainCredential (Get-Credential contoso\administrator) -DomainName contoso.com -Restart
+
+# RHS1 setup
+
+    nmcli con add con-name ens5 ip4 10.0.0.4/24 gw4 10.0.0.1 ifname ens5 type ethernet ipv4.dns 10.0.0.2 ipv4.method manual autoconnect yes
+    hostnamectl set-hostname rhs1.contoso.com
+    echo -e "127.0.0.1\trhs1.contoso.com rhs1" >> /etc/hosts
+    echo -e "::1\t\trhs1.contoso.com rhs1" >> /etc/hosts
+    reboot
+    
+    # RHS1 will reboot
+    yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    yum -y install ansible
+    useradd -G wheel devops
+    echo Pa11word | passwd --stdin devops
+    sed -ie 's/# %wheel/%wheel/g' /etc/sudoers
+    yum -y install realmd sssd oddjob oddjob-mkhomedir adcli samba-common samba-common-tools krb5-workstation authselect-compat
+    realm discover contoso.com
+    realm join example.com -U Administrator
+    realm list
+    authselect select sssd
+    authselect select sssd with-mkhomedir
+    systemctl restart sssd
+    realm permit --all
+    kinit administrator@CONTOSO.COM
+    klist
+    reboot
+    # RHS1 will reboot
+
+# RHS2 setup
+
+    nmcli con add con-name ens8 ip4 10.0.0.5/24 gw4 10.0.0.1 ifname ens8 type ethernet ipv4.dns 10.0.0.2 ipv4.method manual autoconnect yes
+    hostnamectl set-hostname rhs1.contoso.com
+    echo -e "127.0.0.1\trhs1.contoso.com rhs1" >> /etc/hosts
+    echo -e "::1\t\trhs1.contoso.com rhs1" >> /etc/hosts
+    reboot
+    
+    # RHS2 will reboot
+    yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    yum -y module install python36
+    useradd -G wheel devops
+    echo Pa11word | passwd --stdin devops
+    sed -ie 's/# %wheel/%wheel/g' /etc/sudoers
+    yum -y install realmd sssd oddjob oddjob-mkhomedir adcli samba-common samba-common-tools krb5-workstation authselect-compat
+    realm discover contoso.com
+    realm join example.com -U Administrator
+    realm list
+    authselect select sssd
+    authselect select sssd with-mkhomedir
+    systemctl restart sssd
+    realm permit --all
+    kinit administrator@CONTOSO.COM
+    klist
+    reboot
+    # RHS2 will reboot
