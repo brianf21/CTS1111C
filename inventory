@@ -11,3 +11,12 @@ ansible_user: administrator@CONTOSO.COM
 ansible_password: Pa11word
 ansible_connection: winrm
 ansible_winrm_transport: kerberos
+# It is suggested that these be encrypted with ansible-vault:
+# ansible-vault edit group_vars/windows.yml
+ansible_connection: winrm
+
+# May also be passed on the command-line via --user
+ansible_user: Administrator
+
+# May also be supplied at runtime with --ask-pass
+ansible_password: SecretPasswordGoesHere
