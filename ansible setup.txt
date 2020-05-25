@@ -48,9 +48,9 @@
 # RHS2 setup
 
     nmcli con add con-name ens8 ip4 10.0.0.5/24 gw4 10.0.0.1 ifname ens8 type ethernet ipv4.dns 10.0.0.2 ipv4.method manual autoconnect yes
-    hostnamectl set-hostname rhs1.contoso.com
-    echo -e "127.0.0.1\trhs1.contoso.com rhs1" >> /etc/hosts
-    echo -e "::1\t\trhs1.contoso.com rhs1" >> /etc/hosts
+    hostnamectl set-hostname rhs2.contoso.com
+    echo -e "127.0.0.1\trhs2.contoso.com rhs1" >> /etc/hosts
+    echo -e "::1\t\trhs2.contoso.com rhs1" >> /etc/hosts
     reboot
     
     # RHS2 will reboot
