@@ -1,5 +1,12 @@
+dc.contoso.com
+ms.contoso.com
+rhs1.contoso.com
 
+[windowsservers]
+dc.contoso.com
+ms.contoso.com
 
+[windowsservers:vars]
 ansible_user: administrator@CONTOSO.COM
 ansible_password: Pa11word
 ansible_connection: winrm
