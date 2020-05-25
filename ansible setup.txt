@@ -12,11 +12,13 @@
     # The DC will reboot again
     Add-DnsServerPrimaryZone -NetworkId 10.0.0/24 -ReplicationScope Domain
     Register-DnsClient
+    https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
 
     # MS setup
     New-NetIPAddress -IPAddress 10.0.0.23-PrefixLength 24 -DefaultGateway 10.0.0.1 -InterfaceAlias Ethernet
     Set-DnsClientServerAddress -ServerAddresses 10.0.0.2 -InterfaceAlias Ethernet
     Add-Computer -DomainCredential (Get-Credential contoso\administrator) -DomainName contoso.com -Restart
+    https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
 
 # RHS1 setup
 
