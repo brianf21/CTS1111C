@@ -1,1 +1,6 @@
 
+
+ansible_user: administrator@CONTOSO.COM
+ansible_password: Pa11word
+ansible_connection: winrm
+ansible_winrm_transport: kerberos
