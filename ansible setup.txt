@@ -28,7 +28,9 @@
     
     # RHS1 will reboot
     yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-    yum -y install ansible
+    yum -y install ansible krb5-devel python36-devel
+    yum -y groupinstall "Development Tools"
+    python3 -m pip install pywinrm[kerberos]
     useradd -G wheel devops
     echo Pa11word | passwd --stdin devops
     sed -ie 's/# %wheel/%wheel/g' /etc/sudoers
