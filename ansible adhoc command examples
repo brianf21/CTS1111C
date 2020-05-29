@@ -8,5 +8,6 @@ Windows
   ansible ms.contoso.com -m win_reboot
   ansible dc.contoso.com -m win_domain_user -a "name=uone firstname=user surname=one password=Pa11word state=present"
   ansible windowsservers -m win_ping
+  ansible ms.contoso.com -m win_feature -a "name=dhcp include_management_tools=yes state=present"
 
 Linux
