@@ -69,6 +69,10 @@
     realm list
     authselect select sssd
     authselect select sssd with-mkhomedir
+    vi /etc/sssd/sssd.conf
+        krb5_lifetime = 1h
+        krb5_renewable_lifetime = 1d
+        krb5_renew_interval = 60s
     systemctl restart sssd
     realm permit --all
     kinit administrator@CONTOSO.COM
