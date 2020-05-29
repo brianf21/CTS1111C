@@ -1,7 +1,12 @@
+# https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html
+
 Windows
   ansible ms.contoso.com -m win_reboot -u administrator@contoso.com
   
   # kinit and klist
+  # https://serverfault.com/questions/742386/automatic-kerberos-ticket-renewal-indefinitely
   ansible ms.contoso.com -m win_reboot
+  ansible dc.contoso.com -m win_domain_user -a "name=uone firstname=user surname=one password=Pa11word state=present"
+  ansible windowsservers -m win_ping
 
 Linux
