@@ -1,0 +1,7 @@
+Windows
+  ansible ms.contoso.com -m win_reboot -u administrator@contoso.com
+  
+  # kinit and klist
+  ansible ms.contoso.com -m win_reboot
+
+Linux
