@@ -42,6 +42,11 @@
     realm list
     authselect select sssd
     authselect select sssd with-mkhomedir
+    # https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/configuring_domains-setting_up_kerberos_authentication
+    vi /etc/sssd/sssd.conf
+        krb5_lifetime = 1h
+        krb5_renewable_lifetime = 1d
+        krb5_renew_interval = 60s
     systemctl restart sssd
     realm permit --all
     kinit administrator@CONTOSO.COM
@@ -69,6 +74,7 @@
     realm list
     authselect select sssd
     authselect select sssd with-mkhomedir
+    # https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/configuring_domains-setting_up_kerberos_authentication
     vi /etc/sssd/sssd.conf
         krb5_lifetime = 1h
         krb5_renewable_lifetime = 1d
