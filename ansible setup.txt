@@ -39,7 +39,7 @@
     sed -ie 's/# %wheel/%wheel/g' /etc/sudoers
     yum -y install realmd sssd oddjob oddjob-mkhomedir adcli samba-common samba-common-tools krb5-workstation authselect-compat
     realm discover contoso.com
-    realm join example.com -U Administrator
+    realm join contoso.com -U Administrator
     realm list
     authselect select sssd
     authselect select sssd with-mkhomedir
