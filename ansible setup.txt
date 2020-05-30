@@ -18,7 +18,7 @@
 
     New-NetIPAddress -IPAddress 10.0.0.3 -PrefixLength 24 -DefaultGateway 10.0.0.1 -InterfaceAlias Ethernet
     Set-DnsClientServerAddress -ServerAddresses 10.0.0.2 -InterfaceAlias Ethernet
-    Add-Computer -DomainCredential (Get-Credential contoso\administrator) -DomainName contoso.com -Restart
+    Add-Computer -DomainCredential (Get-Credential contoso\administrator) -DomainName contoso.com -NewName ms -Restart
     https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
 
 # RHS1 setup
