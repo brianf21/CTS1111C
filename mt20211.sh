@@ -519,7 +519,8 @@ groupnumber=$(grep managers /etc/group | cut -f3 -d:)
 sgroupnumber=$(grep sales /etc/group | cut -f3 -d:)
 if [[ $(grep usix /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep usix /etc/passwd | cut -f6 -d:) == /home/MANAGERS/usix ]] \
-&& [[ $(grep usix /etc/passwd | cut -f5 -d:) == User\ Six ]]
+&& [[ $(grep usix /etc/passwd | cut -f5 -d:) == User\ Six ]] \
+&& [[ $(grep $sgroupnumber /etc/group | grep ueight) ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
@@ -537,7 +538,8 @@ groupnumber=$(grep managers /etc/group | cut -f3 -d:)
 sgroupnumber=$(grep devops /etc/group | cut -f3 -d:)
 if [[ $(grep useven /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep useven /etc/passwd | cut -f6 -d:) == /home/MANAGERS/useven ]] \
-&& [[ $(grep useven /etc/passwd | cut -f5 -d:) == User\ Seven ]]
+&& [[ $(grep useven /etc/passwd | cut -f5 -d:) == User\ Seven ]] \
+&& [[ $(grep $sgroupnumber /etc/group | grep useven) ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
@@ -573,7 +575,8 @@ groupnumber=$(grep managers /etc/group | cut -f3 -d:)
 sgroupnumber=$(grep engineers /etc/group | cut -f3 -d:)
 if [[ $(grep unine /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep unine /etc/passwd | cut -f6 -d:) == /home/MANAGERS/unine ]] \
-&& [[ $(grep unine /etc/passwd | cut -f5 -d:) == User\ Nine ]]
+&& [[ $(grep unine /etc/passwd | cut -f5 -d:) == User\ Nine ]] \
+&& [[ $(grep $sgroupnumber /etc/group | grep unine) ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
