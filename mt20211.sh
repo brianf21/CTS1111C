@@ -23,12 +23,12 @@ if [[ -d /var/sales/projects ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -37,12 +37,12 @@ if [[ -d /var/devops/projects ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -51,12 +51,12 @@ if [[ -d /var/techs/projects ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -65,12 +65,12 @@ if [[ -d /var/engineers/projects ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -79,12 +79,12 @@ if [[ -L /var/sales/budgets ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -93,12 +93,12 @@ if [[ -L /var/devops/budgets ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -107,12 +107,12 @@ if [[ -L /var/techs/budgets ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -121,12 +121,12 @@ if [[ -L /var/engineers/budgets ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -136,12 +136,12 @@ if [[ "$tempvar" == "managers" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -151,12 +151,12 @@ if [[ "$tempvar" == "s" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -166,12 +166,12 @@ if [[ $tempvar =~ rw[xs]rw[xs] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 echo 'Only the user own should be able to delete files and folders in /var/budgets (1 Point)'
@@ -180,12 +180,12 @@ if [[ $tempvar =~ [tT] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -195,12 +195,12 @@ if [[ "$tempvar" == "sales" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -210,12 +210,12 @@ if [[ "$tempvar" == "s" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -225,12 +225,12 @@ if [[ $tempvar =~ rw[xs]rw[xs] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -240,12 +240,12 @@ if [[ $tempvar =~ [tT] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -255,12 +255,12 @@ if [[ "$tempvar" == "devops" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -270,12 +270,12 @@ if [[ "$tempvar" == "s" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -285,12 +285,12 @@ if [[ $tempvar =~ rw[xs]rw[xs] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -300,12 +300,12 @@ if [[ $tempvar =~ [tT] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -315,12 +315,12 @@ if [[ "$tempvar" == "techs" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -330,12 +330,12 @@ if [[ "$tempvar" == "s" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -345,12 +345,12 @@ if [[ $tempvar =~ rw[xs]rw[xs] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -360,12 +360,12 @@ if [[ $tempvar =~ [tT] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -375,12 +375,12 @@ if [[ "$tempvar" == "engineers" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -390,12 +390,12 @@ if [[ "$tempvar" == "s" ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -405,12 +405,12 @@ if [[ $tempvar =~ rw[xs]rw[xs] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -425,7 +425,7 @@ else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -437,12 +437,12 @@ if [[ $(grep uone /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -454,12 +454,12 @@ if [[ $(grep utwo /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -471,12 +471,12 @@ if [[ $(grep uthree /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -488,12 +488,12 @@ if [[ $(grep ufour /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -505,12 +505,12 @@ if [[ $(grep ufive /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -524,12 +524,12 @@ if [[ $(grep usix /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -543,12 +543,12 @@ if [[ $(grep useven /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 possible=$(($possible+1))
@@ -562,12 +562,12 @@ if [[ $(grep ueight /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
-echo
+  echo
 else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-echo
+  echo
 fi
 
 echo 'Questions: Create a user account called unine with a full name of "User Nine", with a home directory of /home/MANAGERS/unine, a primary group of managers, and supplementary member of engineers. (1 Point)'
@@ -583,6 +583,7 @@ then
   echo
 else
   echo Wrong
+  echo
   echo "Total grade so far: $grade"
   echo
 fi
@@ -596,6 +597,7 @@ then
   echo
 else
   echo Wrong
+  echo
   echo "Total grade so far: $grade"
   echo
 fi
@@ -615,6 +617,7 @@ then
   echo
 else
   echo Wrong
+  echo
   echo "Total grade so far: $grade"
   echo
 fi
@@ -628,6 +631,7 @@ then
   echo
 else
   echo Wrong
+  echo
   echo "Total grade so far: $grade"
   echo
 fi
@@ -641,6 +645,7 @@ then
   echo
 else
   echo Wrong
+  echo
   echo "Total grade so far: $grade"
   echo
 fi
@@ -654,6 +659,7 @@ then
   echo
 else
   echo Wrong
+  echo
   echo "Total grade so far: $grade"
   echo
 fi
@@ -671,11 +677,13 @@ then
     echo
   else
     echo Wrong
+    echo
     echo "Total grade so far: $grade"
     echo
   fi
 else
   echo Wrong
+  echo
   echo "Total grade so far: $grade"
   echo
 fi
@@ -690,6 +698,7 @@ then
   echo
 else
   echo Wrong
+  echo
   echo "Total grade so far: $grade"
   echo
 fi
