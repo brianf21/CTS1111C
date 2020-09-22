@@ -520,7 +520,7 @@ sgroupnumber=$(grep sales /etc/group | cut -f3 -d:)
 if [[ $(grep usix /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep usix /etc/passwd | cut -f6 -d:) == /home/MANAGERS/usix ]] \
 && [[ $(grep usix /etc/passwd | cut -f5 -d:) == User\ Six ]] \
-&& [[ $(grep $sgroupnumber /etc/group | grep ueight) ]]
+&& [[ $(grep $sgroupnumber /etc/group | grep usix) ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
