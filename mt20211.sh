@@ -446,7 +446,7 @@ else
 fi
 
 possible=$(($possible+1))
-echo 'Question: Create a user account called utwo with a full name of "User Two", with a home directory of /home/SALES/uone, and a primary group of sales. (1 Point)'
+echo 'Question: Create a user account called utwo with a full name of "User Two", with a home directory of /home/SALES/utwo, and a primary group of sales. (1 Point)'
 groupnumber=$(grep sales /etc/group | cut -f3 -d:)
 if [[ $(grep utwo /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep utwo /etc/passwd | cut -f6 -d:) == /home/SALES/utwo ]] \
@@ -463,7 +463,7 @@ else
 fi
 
 possible=$(($possible+1))
-echo 'Question: Create a user account called uthree with a full name of "User Three", with a home directory of /home/DEVOPS/uone, and a primary group of devops. (1 Point)'
+echo 'Question: Create a user account called uthree with a full name of "User Three", with a home directory of /home/DEVOPS/uthree, and a primary group of devops. (1 Point)'
 groupnumber=$(grep devops /etc/group | cut -f3 -d:)
 if [[ $(grep uthree /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep uthree /etc/passwd | cut -f6 -d:) == /home/DEVOPS/uthree ]] \
@@ -480,7 +480,7 @@ else
 fi
 
 possible=$(($possible+1))
-echo 'Question: Create a user account called ufour with a full name of "User Four", with a home directory of /home/TECHS/uone, and a primary group of techs. (1 Point)'
+echo 'Question: Create a user account called ufour with a full name of "User Four", with a home directory of /home/TECHS/ufour, and a primary group of techs. (1 Point)'
 groupnumber=$(grep techs /etc/group | cut -f3 -d:)
 if [[ $(grep ufour /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep ufour /etc/passwd | cut -f6 -d:) == /home/TECHS/ufour ]] \
@@ -497,7 +497,7 @@ else
 fi
 
 possible=$(($possible+1))
-echo 'Question: Create a user account called ufive with a full name of "User Five", with a home directory of /home/ENGINEERS/uone, and a primary group of engineerss. (1 Point)'
+echo 'Question: Create a user account called ufive with a full name of "User Five", with a home directory of /home/ENGINEERS/ufive, and a primary group of engineerss. (1 Point)'
 groupnumber=$(grep managers /etc/group | cut -f3 -d:)
 if [[ $(grep ufive /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep ufive /etc/passwd | cut -f6 -d:) == /home/ENGINEERS/ufive ]] \
