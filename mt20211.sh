@@ -515,7 +515,7 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called usix with a full name of "User Six", with a home directory of /home/MANAGERS/usix, a primary group of managers, and supplementary member of sales. (1 Point)'
-groupnumber=$(grep managers /etc/group | cut -f4 -d:)
+groupnumber=$(grep managers /etc/group | cut -f3 -d:)
 sgroupnumber=$(grep sales /etc/group | cut -f3 -d:)
 if [[ $(grep usix /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep usix /etc/passwd | cut -f6 -d:) == /home/MANAGERS/usix ]] \
