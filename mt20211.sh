@@ -147,7 +147,7 @@ fi
 possible=$(($possible+1))
 echo 'Question: Configure /var/budgets so that all files and directories created in /var/budgets are owned by the group managers (1 Point)'
 tempvar=$(ls -ld /var/budgets | cut -c7 )
-if [[ "$tempvar" == "s" ]]
+if [[ $tempvar =~ [sS] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
@@ -206,7 +206,7 @@ fi
 possible=$(($possible+1))
 echo 'Question: Configure /var/sales so that all files and directories created in /var/sales are owned by the group sales (1 Point)'
 tempvar=$(ls -ld /var/sales | cut -c7 )
-if [[ "$tempvar" == "s" ]]
+if [[ $tempvar == [sS] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
@@ -266,7 +266,7 @@ fi
 possible=$(($possible+1))
 echo 'Question: Configure /var/devops so that all files and directories created in /var/devops are owned by the group devops (1 Point)'
 tempvar=$(ls -ld /var/devops | cut -c7 )
-if [[ "$tempvar" == "s" ]]
+if [[ $tempvar == [sS] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
@@ -326,7 +326,7 @@ fi
 possible=$(($possible+1))
 echo 'Question: Configure /var/techs so that all files and directories created in /var/techs are owned by the group techs (1 Point)'
 tempvar=$(ls -ld /var/techs | cut -c7 )
-if [[ "$tempvar" == "s" ]]
+if [[ $tempvar == [sS] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
@@ -386,7 +386,7 @@ fi
 possible=$(($possible+1))
 echo 'Question: Configure /var/engineers so that all files and directories created in /var/engineers are owned by the group engineers (1 Point)'
 tempvar=$(ls -ld /var/engineers | cut -c7 )
-if [[ "$tempvar" == "s" ]]
+if [[ $tempvar == [sS] ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
