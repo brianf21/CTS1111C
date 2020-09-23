@@ -610,7 +610,7 @@ echo
 
 possible=$(($possible+1))
 echo 'Question: Create the file /var/budgets/spongebob.txt with the following content. (1 Point)'
-if [[ $(md5sum /var/budgets/spongebob.txt) == f5bb8cb8143bb0249e601900f34aabc3\ /var/budgets/spongebob.txt ]]
+if [[ $(md5sum /var/budgets/spongebob.txt) == f5bb8cb8143bb0249e601900f34aabc3\ \ /var/budgets/spongebob.txt ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
@@ -624,7 +624,7 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Copy /var/budgets/spongebob.txt to /var/budgets/spongebob2.txt and change the word kid in /var/budgets/spongebob2.txt to sponge. (1 Point)'
-if [[ $(md5sum /var/budgets/spongebob2.txt) == f75fcd1e98cf9899a1e62711ba55a919\ /var/budgets/spongebob2.txt ]]
+if [[ $(md5sum /var/budgets/spongebob2.txt) == f75fcd1e98cf9899a1e62711ba55a919\ \ /var/budgets/spongebob2.txt ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
@@ -638,7 +638,7 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Copy /var/budgets/spongebob2.txt to /var/budgets/spongebob3.txt and put a line break after "But that\`s okay\!" in /var/budgets/spongebob3.txt. (1 Point)'
-if [[ $(md5sum /var/budgets/spongebob3.txt) == 2e7f0cd1219bc85fe02c67bc2ea1faab\ /var/budgets/spongebob3.txt ]]
+if [[ $(md5sum /var/budgets/spongebob3.txt) == 2e7f0cd1219bc85fe02c67bc2ea1faab\ \ /var/budgets/spongebob3.txt ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
@@ -652,7 +652,7 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Copy /var/budgets/spongebob3.txt to /var/budgets/spongebob4.txt and add a line at the top saying "Spongebob Quote" with a blank line underneath it in /var/budgets/spongebob4.txt. (1 Point)'
-if [[ $(md5sum /var/budgets/spongebob4.txt) == 6da9cdfcbe365990d37b454eb5176732\ /var/budgets/spongebob4.txt ]]
+if [[ $(md5sum /var/budgets/spongebob4.txt) == 6da9cdfcbe365990d37b454eb5176732\ \ /var/budgets/spongebob4.txt ]]
 then
   grade=$(($grade+1))
   echo "Total grade so far: $grade"
