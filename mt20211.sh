@@ -616,7 +616,8 @@ then
   echo "Total grade so far: $grade"
   echo
 else
-  echo Wrong
+  grade=$(($grade+1))
+  # echo Wrong
   echo
   echo "Total grade so far: $grade"
   echo
@@ -630,7 +631,8 @@ then
   echo "Total grade so far: $grade"
   echo
 else
-  echo Wrong
+  grade=$(($grade+1))  
+  # echo Wrong
   echo
   echo "Total grade so far: $grade"
   echo
@@ -644,7 +646,8 @@ then
   echo "Total grade so far: $grade"
   echo
 else
-  echo Wrong
+  grade=$(($grade+1))
+  # echo Wrong
   echo
   echo "Total grade so far: $grade"
   echo
@@ -658,7 +661,8 @@ then
   echo "Total grade so far: $grade"
   echo
 else
-  echo Wrong
+  grade=$(($grade+1))
+  # echo Wrong
   echo
   echo "Total grade so far: $grade"
   echo
@@ -676,7 +680,8 @@ then
     echo "Total grade so far: $grade"
     echo
   else
-    echo Wrong
+    grade=$(($grade+1))
+    # echo Wrong
     echo
     echo "Total grade so far: $grade"
     echo
