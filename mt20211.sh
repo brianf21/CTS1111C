@@ -497,7 +497,7 @@ else
 fi
 
 possible=$(($possible+1))
-echo 'Question: Create a user account called ufive with a full name of "User Five", with a home directory of /home/ENGINEERS/ufive, and a primary group of engineerss. (1 Point)'
+echo 'Question: Create a user account called ufive with a full name of "User Five", with a home directory of /home/ENGINEERS/ufive, and a primary group of engineers. (1 Point)'
 groupnumber=$(grep engineers /etc/group | cut -f3 -d:)
 if [[ $(grep ufive /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep ufive /etc/passwd | cut -f6 -d:) == /home/ENGINEERS/ufive ]] \
