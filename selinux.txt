@@ -1,0 +1,76 @@
+   72  sestatus
+   73  setenforce --help
+   74  setenforce 0
+   75  sestatus
+   76  setenforce 1
+   77  vi /etc/sysconfig/selinux 
+   78  getenforce
+   79  yum -y install httpd
+   80  echo data > /var/www/html/index.html
+   81  ls -Z /var/www/html/index.html 
+   82  ps axZ
+   83  ls -Z /var/www/html/index.html 
+   84  systemctl enable httpd
+   85  systemctl start httpd
+   86  curl http://127.0.0.1
+   87  ps axZ | httpd
+   88  ps axZ | grep httpd
+   89  ls -Z /var/www/html/index.html 
+   90  ls -dZ /var/www/html
+   91  shutdown -h now
+   92  touch somefile.txt
+   93  ls -lZ somefile.txt 
+   94  ls -Z somefile.txt 
+   95  ls -Z /home
+   96  mv somefile.txt /home/www/html
+   97  mv somefile.txt /home/www/html/
+   98  mv somefile.txt /var/www/html/
+   99  ls -Z /var/www/html/somefile.txt 
+  100  touch anotherfile.txt
+  101  ls -Z anotherfile.txt 
+  102  cp anotherfile.txt /var/www/html/
+  103  ls -Z /var/www/html/anotherfile.txt 
+  104  ls -Z /var/www/html/index.html 
+  105  mkdir /virtual
+  106  ls -dZ /virtual
+  107  chcon -t httpd_sys_content_t /virtual
+  108  ls -dZ /virtual
+  109  restorecon -v /virtual
+  110  ls -dZ /virtual
+  111  semanage fcontext -l
+  112  semanage fcontext -l | grep /var/www/
+  113  semanage fcontext --help
+  114  restorecon -Rv /var/www/
+  115  restorecon -v /var/www/html/somefile.txt 
+  116  ls -Z /var/www/html/somefile.txt 
+  117  ls -dZ /virtual/
+  118  semanage fcontext -a -t httpd_sys_content_t '/virtual(/.*)?'
+  119  ls -dZ /virtual
+  120  restorecon --help
+  121  man restorecon 
+  122  restorecon -RFvv /virtual
+  123  getsebool -a
+  124  getsebool -a | grep httpd
+  125  setsebool httpd_enable_homedirs on
+  126  getsebool -a | grep httpd
+  127  setsebool -P httpd_enable_homedirs on
+  128  semanage boolean -l
+  129  semanage boolean -l | more
+  130  semanage boolean -l | grep httpd_enable
+  131  touch badfile 
+  132  echo badfile > badfile
+  133  cat badfile 
+  134  echo goodfile > /var/www/http/goodfile
+  135  echo goodfile > /var/www/html/goodfile
+  136  curl http://127.0.0.1/goodfile
+  137  ls -z /var/www/html/goodfile 
+  138  ls -Z /var/www/html/goodfile 
+  139  mv badfile /var/www/html/
+  140  ls -Z /var/www/html/badfile 
+  141  curl http://127.0.0.1/badfile
+  142  tail /var/log/audit/audit.log 
+  143  tail /var/log/messages 
+  144  sealert -l 0b163544-56b6-4e8b-9933-f0a1ae77d874
+  145  restorecon -FRvv /var/www
+  146  curl http://127.0.0.1/badfile
+  147  history > /tmp/selinux.txt
