@@ -428,6 +428,8 @@ else
   echo
 fi
 
+echo "User One"
+
 possible=$(($possible+1))
 echo 'Question: Create a user account called uone with a full name of "User One", with a home directory of /home/MANAGERS/uone, and a primary group of managers. (1 Point)'
 groupnumber=$(grep managers /etc/group | cut -f3 -d:)
@@ -444,6 +446,8 @@ else
   echo "Total grade so far: $grade"
   echo
 fi
+
+echo "User Two"
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called utwo with a full name of "User Two", with a home directory of /home/SALES/utwo, and a primary group of sales. (1 Point)'
@@ -462,6 +466,8 @@ else
   echo
 fi
 
+echo "User Three"
+
 possible=$(($possible+1))
 echo 'Question: Create a user account called uthree with a full name of "User Three", with a home directory of /home/DEVOPS/uthree, and a primary group of devops. (1 Point)'
 grep devops /etc/group && groupnumber=$(grep devops /etc/group | cut -f3 -d:)
@@ -478,6 +484,8 @@ else
   echo "Total grade so far: $grade"
   echo
 fi
+
+echo "User Four"
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called ufour with a full name of "User Four", with a home directory of /home/TECHS/ufour, and a primary group of techs. (1 Point)'
@@ -496,6 +504,8 @@ else
   echo
 fi
 
+echo "User Five"
+
 possible=$(($possible+1))
 echo 'Question: Create a user account called ufive with a full name of "User Five", with a home directory of /home/ENGINEERS/ufive, and a primary group of engineers. (1 Point)'
 grep engineers /etc/group && groupnumber=$(grep engineers /etc/group | cut -f3 -d:)
@@ -512,6 +522,8 @@ else
   echo "Total grade so far: $grade"
   echo
 fi
+
+echo "User Six"
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called usix with a full name of "User Six", with a home directory of /home/MANAGERS/usix, a primary group of managers, and supplementary member of sales. (1 Point)'
@@ -532,6 +544,8 @@ else
   echo
 fi
 
+echo "User Seven"
+
 possible=$(($possible+1))
 echo 'Question: Create a user account called useven with a full name of "User Seven", with a home directory of /home/MANAGERS/useven, a primary group of managers, and supplementary member of devops. (1 Point)'
 grep managers /etc/group && groupnumber=$(grep managers /etc/group | cut -f3 -d:)
@@ -550,6 +564,8 @@ else
   echo "Total grade so far: $grade"
   echo
 fi
+
+echo "User Eight"
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called ueight with a full name of "User Eight", with a home directory of /home/MANAGERS/ueight, a primary group of managers, and supplementary member of techs. (1 Point)'
@@ -570,7 +586,7 @@ else
   echo
 fi
 
-echo "User Eight"
+echo "User Nine"
 
 echo 'Questions: Create a user account called unine with a full name of "User Nine", with a home directory of /home/MANAGERS/unine, a primary group of managers, and supplementary member of engineers. (1 Point)'
 grep managers /etc/group && groupnumber=$(grep managers /etc/group | cut -f3 -d:)
