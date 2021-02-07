@@ -545,6 +545,8 @@ else
 fi
 
 echo "User Seven"
+groupnumber=0
+sgroupnumber=0
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called useven with a full name of "User Seven", with a home directory of /home/MANAGERS/useven, a primary group of managers, and supplementary member of devops. (1 Point)'
@@ -562,12 +564,11 @@ else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
-  echo $grade
-  echo $grade
   echo
 fi
 
 echo "User Eight"
+
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called ueight with a full name of "User Eight", with a home directory of /home/MANAGERS/ueight, a primary group of managers, and supplementary member of techs. (1 Point)'
