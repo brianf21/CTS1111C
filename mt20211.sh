@@ -570,6 +570,8 @@ else
   echo
 fi
 
+echo "User Eight"
+
 echo 'Questions: Create a user account called unine with a full name of "User Nine", with a home directory of /home/MANAGERS/unine, a primary group of managers, and supplementary member of engineers. (1 Point)'
 grep managers /etc/group && groupnumber=$(grep managers /etc/group | cut -f3 -d:)
 grep engineers /etc/group && sgroupnumber=$(grep engineers /etc/group | cut -f3 -d:)
