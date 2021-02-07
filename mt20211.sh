@@ -562,6 +562,7 @@ else
   echo Wrong
   echo 
   echo "Total grade so far: $grade"
+  echo test
   echo
 fi
 
