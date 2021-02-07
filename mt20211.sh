@@ -447,7 +447,7 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called utwo with a full name of "User Two", with a home directory of /home/SALES/utwo, and a primary group of sales. (1 Point)'
-groupnumber=$(grep sales /etc/group | cut -f3 -d:)
+grep sales /etc/group && groupnumber=$(grep sales /etc/group | cut -f3 -d:)
 if [[ $(grep utwo /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep utwo /etc/passwd | cut -f6 -d:) == /home/SALES/utwo ]] \
 && [[ $(grep utwo /etc/passwd | cut -f5 -d:) == User\ Two ]]
@@ -464,7 +464,7 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called uthree with a full name of "User Three", with a home directory of /home/DEVOPS/uthree, and a primary group of devops. (1 Point)'
-groupnumber=$(grep devops /etc/group | cut -f3 -d:)
+grep devops /etc/group && groupnumber=$(grep devops /etc/group | cut -f3 -d:)
 if [[ $(grep uthree /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep uthree /etc/passwd | cut -f6 -d:) == /home/DEVOPS/uthree ]] \
 && [[ $(grep uthree /etc/passwd | cut -f5 -d:) == User\ Three ]]
@@ -481,7 +481,7 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called ufour with a full name of "User Four", with a home directory of /home/TECHS/ufour, and a primary group of techs. (1 Point)'
-groupnumber=$(grep techs /etc/group | cut -f3 -d:)
+grep techs /etc/group && groupnumber=$(grep techs /etc/group | cut -f3 -d:)
 if [[ $(grep ufour /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep ufour /etc/passwd | cut -f6 -d:) == /home/TECHS/ufour ]] \
 && [[ $(grep ufour /etc/passwd | cut -f5 -d:) == User\ Four ]]
@@ -498,7 +498,7 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called ufive with a full name of "User Five", with a home directory of /home/ENGINEERS/ufive, and a primary group of engineers. (1 Point)'
-groupnumber=$(grep engineers /etc/group | cut -f3 -d:)
+grep engineers /etc/group && groupnumber=$(grep engineers /etc/group | cut -f3 -d:)
 if [[ $(grep ufive /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep ufive /etc/passwd | cut -f6 -d:) == /home/ENGINEERS/ufive ]] \
 && [[ $(grep ufive /etc/passwd | cut -f5 -d:) == User\ Five ]]
@@ -515,8 +515,8 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called usix with a full name of "User Six", with a home directory of /home/MANAGERS/usix, a primary group of managers, and supplementary member of sales. (1 Point)'
-groupnumber=$(grep managers /etc/group | cut -f3 -d:)
-sgroupnumber=$(grep sales /etc/group | cut -f3 -d:)
+grep managers /etc/group && groupnumber=$(grep managers /etc/group | cut -f3 -d:)
+grep sales /etc/group && sgroupnumber=$(grep sales /etc/group | cut -f3 -d:)
 if [[ $(grep usix /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep usix /etc/passwd | cut -f6 -d:) == /home/MANAGERS/usix ]] \
 && [[ $(grep usix /etc/passwd | cut -f5 -d:) == User\ Six ]] \
@@ -534,8 +534,8 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called useven with a full name of "User Seven", with a home directory of /home/MANAGERS/useven, a primary group of managers, and supplementary member of devops. (1 Point)'
-groupnumber=$(grep managers /etc/group | cut -f3 -d:)
-sgroupnumber=$(grep devops /etc/group | cut -f3 -d:)
+grep managers /etc/group && groupnumber=$(grep managers /etc/group | cut -f3 -d:)
+grep devops /etc/group && sgroupnumber=$(grep devops /etc/group | cut -f3 -d:)
 if [[ $(grep useven /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep useven /etc/passwd | cut -f6 -d:) == /home/MANAGERS/useven ]] \
 && [[ $(grep useven /etc/passwd | cut -f5 -d:) == User\ Seven ]] \
@@ -553,8 +553,8 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Create a user account called ueight with a full name of "User Eight", with a home directory of /home/MANAGERS/ueight, a primary group of managers, and supplementary member of techs. (1 Point)'
-groupnumber=$(grep managers /etc/group | cut -f3 -d:)
-sgroupnumber=$(grep techs /etc/group | cut -f3 -d:)
+grep managers /etc/group && groupnumber=$(grep managers /etc/group | cut -f3 -d:)
+grep techs /etc/group && sgroupnumber=$(grep techs /etc/group | cut -f3 -d:)
 if [[ $(grep ueight /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep ueight /etc/passwd | cut -f6 -d:) == /home/MANAGERS/ueight ]] \
 && [[ $(grep ueight /etc/passwd | cut -f5 -d:) == User\ Eight ]] \
@@ -571,8 +571,8 @@ else
 fi
 
 echo 'Questions: Create a user account called unine with a full name of "User Nine", with a home directory of /home/MANAGERS/unine, a primary group of managers, and supplementary member of engineers. (1 Point)'
-groupnumber=$(grep managers /etc/group | cut -f3 -d:)
-sgroupnumber=$(grep engineers /etc/group | cut -f3 -d:)
+grep managers /etc/group && groupnumber=$(grep managers /etc/group | cut -f3 -d:)
+grep engineers /etc/group && sgroupnumber=$(grep engineers /etc/group | cut -f3 -d:)
 if [[ $(grep unine /etc/passwd | cut -f4 -d:) == $groupnumber ]] \
 && [[ $(grep unine /etc/passwd | cut -f6 -d:) == /home/MANAGERS/unine ]] \
 && [[ $(grep unine /etc/passwd | cut -f5 -d:) == User\ Nine ]] \
