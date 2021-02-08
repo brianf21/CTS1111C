@@ -174,7 +174,7 @@ else
   echo
 fi
 
-echo 'Only the user own should be able to delete files and folders in /var/budgets (1 Point)'
+echo 'Question: Only the user own should be able to delete files and folders in /var/budgets (1 Point)'
 tempvar=$(ls -ld /var/budgets | cut -c10 )
 if [[ $tempvar =~ [tT] ]]
 then
