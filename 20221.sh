@@ -3,7 +3,7 @@
 possible=0
 grade=0
 
-echo ######################################
+echo "######################################"
 echo Question 1
 
 possible=$(($possible+1))
@@ -76,8 +76,8 @@ else
   echo
 fi
 
-echo ######################################
-echo Question 1
+echo "######################################"
+echo Question 2
 
 possible=$(($possible+1))
 echo 'Question: Link /var/budgets to /var/sales/budgets (1 Point)'
@@ -135,7 +135,7 @@ else
   echo
 fi
 
-echo ######################################
+echo "######################################"
 echo Question 3
 
 echo "User One"
@@ -338,7 +338,7 @@ grade=$(($grade+1))
 echo "Total grade so far: $grade"
 echo
 
-echo ######################################
+echo "######################################"
 echo Question 4
 
 possible=$(($possible+1))
@@ -356,7 +356,7 @@ else
   echo
 fi
 
-echo ######################################
+echo "######################################"
 echo Question 5
 
 possible=$(($possible+1))
