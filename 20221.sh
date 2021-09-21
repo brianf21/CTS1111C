@@ -302,6 +302,7 @@ fi
 
 echo "User Nine"
 
+possible=$(($possible+1))
 echo 'Questions: Create a user account called unine with a full name of "User Nine", with a home directory of /home/MANAGERS/unine, a primary group of managers, and supplementary member of engineers. (1 Point)'
 grep managers /etc/group && groupnumber=$(grep managers /etc/group | cut -f3 -d:)
 grep engineers /etc/group && sgroupnumber=$(grep engineers /etc/group | cut -f3 -d:)
@@ -336,6 +337,12 @@ fi
 
 possible=$(($possible+1))
 echo 'Question: Set all of passwords of the newly created account to Pa11word. (1 Points)'
+grade=$(($grade+1))
+echo "Total grade so far: $grade"
+echo
+
+possible=$(($possible+1))
+echo 'Question: For all of the newly created account, force users to change their password every 30 days, but no less than 2 days. Users should be given a 3 day warning before their passwords expire. (1 Points)'
 grade=$(($grade+1))
 echo "Total grade so far: $grade"
 echo
