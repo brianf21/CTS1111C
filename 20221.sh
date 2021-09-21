@@ -3,6 +3,9 @@
 possible=0
 grade=0
 
+echo ######################################
+echo Question 1
+
 possible=$(($possible+1))
 echo 'Question: Create the following directories: /var/budgets (1 Point)'
 if [[ -d /var/budgets ]]
@@ -73,6 +76,9 @@ else
   echo
 fi
 
+echo ######################################
+echo Question 1
+
 possible=$(($possible+1))
 echo 'Question: Link /var/budgets to /var/sales/budgets (1 Point)'
 if [[ -L /var/sales/budgets ]]
@@ -128,6 +134,9 @@ else
   echo "Total grade so far: $grade"
   echo
 fi
+
+echo ######################################
+echo Question 3
 
 echo "User One"
 
@@ -270,7 +279,6 @@ fi
 
 echo "User Eight"
 
-
 possible=$(($possible+1))
 echo 'Question: Create a user account called ueight with a full name of "User Eight", with a home directory of /home/MANAGERS/ueight, a primary group of managers, and supplementary member of techs. (1 Point)'
 grep managers /etc/group && groupnumber=$(grep managers /etc/group | cut -f3 -d:)
@@ -330,6 +338,9 @@ grade=$(($grade+1))
 echo "Total grade so far: $grade"
 echo
 
+echo ######################################
+echo Question 4
+
 possible=$(($possible+1))
 echo 'Question: Create the file /var/budgets/spongebob.txt with the following content. (1 Point)'
 if [[ $(md5sum /var/budgets/spongebob.txt) == f5bb8cb8143bb0249e601900f34aabc3\ \ /var/budgets/spongebob.txt ]]
@@ -344,6 +355,9 @@ else
   echo "Total grade so far: $grade"
   echo
 fi
+
+echo ######################################
+echo Question 5
 
 possible=$(($possible+1))
 echo 'Question: Copy /var/budgets/spongebob.txt to /var/budgets/spongebob2.txt and change the word kid in /var/budgets/spongebob2.txt to sponge. (1 Point)'
