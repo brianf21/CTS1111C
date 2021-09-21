@@ -3,7 +3,7 @@
 possible=0
 grade=0
 
-echo "######################################"
+echo '######################################'
 echo Question 1
 
 possible=$(($possible+1))
@@ -76,7 +76,7 @@ else
   echo
 fi
 
-echo "######################################"
+echo '######################################'
 echo Question 2
 
 possible=$(($possible+1))
@@ -135,7 +135,7 @@ else
   echo
 fi
 
-echo "######################################"
+echo '######################################'
 echo Question 3
 
 echo "User One"
@@ -356,7 +356,7 @@ else
   echo
 fi
 
-echo "######################################"
+echo '######################################'
 echo Question 5
 
 possible=$(($possible+1))
