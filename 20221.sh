@@ -349,7 +349,7 @@ for i in uone utwo uthree ufour ufive usix useven ueight unine
   do
     value=$(cat /etc/shadow | grep $i | awk -F: '{ print $4$5$6 }')
     
-    if [[ $value != "2303" ]]
+    if [[ $value != "233" ]]
       then
         check=false
     fi
