@@ -343,6 +343,20 @@ echo
 
 possible=$(($possible+1))
 echo 'Question: For all of the newly created account, force users to change their password every 30 days, but no less than 2 days. Users should be given a 3 day warning before their passwords expire. (1 Points)'
+
+check=true
+for i in uone utwo uthree ufour ufive usix useven ueight unine
+  do
+    value=$(cat /etc/shadow | grep $i | awk -F: '{ print $4$5$6 }')
+    
+    if [[ $value != "2303" ]]
+      then
+        check=false
+    fi
+  done
+  
+echo $check
+
 grade=$(($grade+1))
 echo "Total grade so far: $grade"
 echo
