@@ -349,17 +349,23 @@ for i in uone utwo uthree ufour ufive usix useven ueight unine
   do
     value=$(cat /etc/shadow | grep $i | awk -F: '{ print $4$5$6 }')
     
-    if [[ $value != "233" ]]
+    if [[ $value != "2303" ]]
       then
         check=false
     fi
   done
   
-echo $check
-
-grade=$(($grade+1))
-echo "Total grade so far: $grade"
-echo
+if [[ $check == "true" ]]
+then
+  grade=$(($grade+1))
+  echo "Total grade so far: $grade"
+  echo
+else
+  echo Wrong
+  echo
+  echo "Total grade so far: $grade"
+  echo
+fi
 
 echo $possible
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
